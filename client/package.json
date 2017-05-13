@@ -1,0 +1,22 @@
+{
+  "name": "stream-speed-test",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexendoo/stream-speed-test.git"
+  },
+  "author": "Alex Macleod <alex@macleod.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alexendoo/stream-speed-test/issues"
+  },
+  "homepage": "https://github.com/Alexendoo/stream-speed-test",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.5.1"
+  }
+}

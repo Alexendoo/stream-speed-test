@@ -1,5 +1,7 @@
 package main
 
+//go:generate go-bindata -prefix client/dist/ client/dist/
+
 import (
 	"io"
 	"io/ioutil"
