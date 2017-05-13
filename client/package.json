@@ -2,7 +2,7 @@
   "name": "stream-speed-test",
   "version": "0.1.0",
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
