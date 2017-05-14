@@ -2,3 +2,5 @@ _tools
 node_modules
 dist
 npm-debug.log
+bindata.go
+stream-speed-test*

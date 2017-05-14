@@ -30,7 +30,17 @@ func main() {
 }
 
 func files(w http.ResponseWriter, r *http.Request) {
+	path := r.URL.Path
+	if path == "/" {
+		path = "/index.html"
+	}
 
+	asset, err := Asset(path[1:])
+	if err != nil {
+		http.NotFound(w, r)
+	} else {
+		w.Write(asset)
+	}
 }
 
 func source(w http.ResponseWriter, r *http.Request) {
@@ -39,6 +49,8 @@ func source(w http.ResponseWriter, r *http.Request) {
 	header := w.Header()
 	header.Set("Cache-Control", "no-store")
 	header.Set("Content-Length", "53687091200")
+	header.Set("Content-Type", "application/octet-stream")
+	header.Set("X-Content-Type-Options", "nosniff")
 
 	io.CopyN(w, random, 53687091200) // 50 GiB
 }
